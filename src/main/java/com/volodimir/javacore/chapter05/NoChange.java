@@ -9,8 +9,9 @@ public class NoChange {
             x = x * 10; // этот оператор не оказывает никакого влияния на массив nums
         }
         System.out.println();
-        for (int x : nums)
+        for (int x : nums) {
             System.out.print(x + " ");
+        }
             System.out.println();
-    }
+                }
 }
