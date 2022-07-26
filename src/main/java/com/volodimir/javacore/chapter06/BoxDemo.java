@@ -6,6 +6,9 @@ class Box {
     double width;
     double haight;
     double depht;
+
+    public void volume() {
+    }
 }
 // в этом классе объявляется объект типа Box
 class BoxDemo {
