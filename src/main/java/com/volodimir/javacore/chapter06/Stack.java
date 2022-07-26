@@ -37,11 +37,11 @@ public class Stack {
             for (int i = 0; i < 20; i++) mystack2.push(i);
 
             // извлечь єти числа из стека
-            System.out.println("Содержимое стека mystask1:");
+            System.out.println("Содержимое стека mystack1:");
             for (int i = 0; i < 10; i++) {
                 System.out.println(mystack1.pop());
             }
-            System.out.println("Содержимое стека mystask2:");
+            System.out.println("Содержимое стека mystack2:");
             for (int i = 0; i < 10; i++) {
                 System.out.println(mystack2.pop());
             }
