@@ -1,7 +1,7 @@
 package com.volodimir.javacore.chapter06;
 
 public class Stack {
-    int stsk[] = new int[10];
+    int stck[] = new int[10];
     int tos;
 
     // инициализировать вершину стека
@@ -14,7 +14,7 @@ public class Stack {
         if (tos == 9)
             System.out.println("Стек заполнен.");
         else
-            stsk[++tos] = item;
+            stck[++tos] = item;
     }
 
     // извлечь элемент из стека
