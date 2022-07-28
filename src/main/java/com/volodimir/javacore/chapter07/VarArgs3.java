@@ -8,9 +8,9 @@ public class VarArgs3 {
         for (int x : v) {
 
             System.out.print(x + " ");
-
-            System.out.println();
         }
+            System.out.println();
+
     }
 
     static void vaTest(boolean... v) {
@@ -20,18 +20,17 @@ public class VarArgs3 {
         for (boolean x : v) {
 
             System.out.print(x + " ");
-
-            System.out.println();
         }
+            System.out.println();
     }
 
     static void vaTest(String msg, int... v) {
         System.out.print("vaTest (String, int ...): " + msg + v.length + " Содержимое: ");
         for (int x : v) {
             System.out.print(x + " ");
-
-            System.out.println();
         }
+            System.out.println();
+
     }
 
     public static void main(String[] args) {

@@ -19,8 +19,7 @@ class Recursion2 {
 
         for (i = 0; i < 10; i++) {
             ob.values[i] = i;
-
-            ob.printArray(10);
         }
+            ob.printArray(10);
     }
 }

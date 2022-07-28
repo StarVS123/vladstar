@@ -6,9 +6,8 @@ public class VarArgs {
         System.out.print("Количество аргументов: " + v.length + " Содержимое: ");
         for (int x : v) {
             System.out.print(x + " ");
-
-            System.out.println();
         }
+            System.out.println();
     }
 
     public static void main(String[] args) {

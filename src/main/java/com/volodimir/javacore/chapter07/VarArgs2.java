@@ -6,10 +6,9 @@ public class VarArgs2 {
         System.out.print(msg + v.length + " Содержимое: ");
         for (int x : v) {
             System.out.print(x + " ");
-
+        }
             System.out.println();
         }
-    }
 
     public static void main(String[] args) {
 
