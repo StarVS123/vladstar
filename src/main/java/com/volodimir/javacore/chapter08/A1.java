@@ -1,30 +1,26 @@
 package com.volodimir.javacore.chapter08;
 
 public class A1 {
-    int i;         // этот член класса открыт по умолчанию
-    private int j; // а этот член закрыт в классе А
-
-    void seti,j (int x, int y) {
-        i = x;
-        j = y;
-    }
+    int i;
 }
-// Член j класса А в этом классе недоступен
+// создать подкласс путем расширения класса А
 class B1 extends A1 {
-    int total;
+    int i; // этот член i скрывает член i из класса А
 
-    void sum() {
-        total = i + j; // ОШИБКА член j в этом классе недоступен
+    B1(int a, int b) {
+        super.i = a; // член i из класса А
+        i = b;       // член i из класса В
+    }
+    void show () {
+        System.out.println("Член i в суперклассе: " + super.i);
+        System.out.println("Член i в подклассе: " + i);
     }
 }
-class Access {
+class UseSuper {
     public static void main(String[] args) {
-        B1 subOb = new B1();
+        B1 subOb = new B1(1, 2);
 
-        subOb.seti,j (10,12);
+        subOb.show();
 
-        subOb.sum();
-
-        System.out.println("Сумма равна: " + subOb.total);
     }
 }
