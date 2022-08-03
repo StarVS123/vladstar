@@ -1,6 +1,7 @@
 package com.volodimir.javacore.chapter09;
 
-class Client implements Callback {
+public class Client implements Callback {
+
     // реализовать интерфейс Callback
     public void callback (int p) {
 
