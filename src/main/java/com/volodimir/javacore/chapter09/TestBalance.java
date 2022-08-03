@@ -1,6 +1,6 @@
-package com.volodimir.javacore.chapter08;
+package com.volodimir.javacore.chapter09;
 
-import com.volodimir.javacore.chapter09.MyPack.*;
+import com.volodimir.javacore.chapter09.MyPack.Balance;
 
 public class TestBalance {
     public static void main(String[] args) {
