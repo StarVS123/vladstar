@@ -1,4 +1,4 @@
-package com.volodimir.javacore.chapter08.MyPack;
+package com.volodimir.javacore.chapter09.MyPack;
 
 public class Balance {
     String name;
