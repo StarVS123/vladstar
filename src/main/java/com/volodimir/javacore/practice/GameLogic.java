@@ -1,8 +1,9 @@
 package com.volodimir.javacore.practice;
 
-import javax.sound.sampled.Line;
 
-public class GameLogic extends Field {
+import static com.volodimir.javacore.practice.Field.*;
+
+public class GameLogic {
 
     // метод, создающий игровое поле и позволяющий начать игру
     public static void Start() {

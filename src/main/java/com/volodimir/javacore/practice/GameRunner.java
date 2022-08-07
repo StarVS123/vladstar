@@ -1,6 +1,9 @@
 package com.volodimir.javacore.practice;
 
-public class GameRunner extends GameLogic {
+import static com.volodimir.javacore.practice.Field.*;
+import static com.volodimir.javacore.practice.GameLogic.*;
+
+public class GameRunner {
     public static void main(String[] args) {
         Start();
         do {
