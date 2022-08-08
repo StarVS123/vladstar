@@ -1,6 +1,8 @@
 package com.volodimir.javacore.practice;
 
 
+import java.util.Objects;
+
 import static com.volodimir.javacore.practice.Field.*;
 
 public class GameLogic {
@@ -24,7 +26,7 @@ public class GameLogic {
             System.out.println("Игрок '" + activePlayer + "' введи строку и столбик от 1 до 3 через пробел.");
             int line = in.nextInt() - 1;
             int column = in.nextInt() - 1;
-            if (line >= 0 && line < LINE && column >= 0 && column < COLUMN && field[line][column] == EMPTY) {
+            if (line >= 0 && line < LINE && column >= 0 && column < COLUMN && Objects.equals(field[line][column], EMPTY)) {
                 field[line][column] = activePlayer;
                 correctInput = true;
             } else {
@@ -52,7 +54,7 @@ public class GameLogic {
     public static boolean FieldFilling() {
         for (int line = 0; line < LINE; line ++){
             for (int column = 0; column < COLUMN; column ++){
-                if (field[line][column] == EMPTY){
+                if (Objects.equals(field[line][column], EMPTY)){
                     return false;
                 }
             }
@@ -68,7 +70,7 @@ public class GameLogic {
         for (int line = 0; line < LINE; line++) {
             iCoincidences = 0;
             for (int column = 0; column < COLUMN; column++) {
-                if (field[line][0] != EMPTY && field[line][0] == field[line][column]) {
+                if (field[line][0] != EMPTY && Objects.equals(field[line][0], field[line][column])) {
                     iCoincidences++;
                 }
             }
@@ -80,7 +82,7 @@ public class GameLogic {
         for (int column = 0; column < COLUMN; column++) {
             iCoincidences = 0;
             for (int line = 0; line < LINE; line++) {
-                if (field[0][column] != EMPTY && field[0][column] == field[line][column]) {
+                if (field[0][column] != EMPTY && Objects.equals(field[0][column], field[line][column])) {
                     iCoincidences++;
                 }
             }
@@ -89,11 +91,11 @@ public class GameLogic {
             }
         }
         // проверка совпадений по диагонали слева направо
-        if (field[0][0] != EMPTY && field[0][0] == field[1][1] && field[0][0] == field[2][2]) {
+        if (field[0][0] != EMPTY && Objects.equals(field[0][0], field[1][1]) && Objects.equals(field[0][0], field[2][2])) {
             return field[0][0];
         }
         // проверка совпадений по диагонали справа налево
-        if (field[0][2] != EMPTY && field[1][1] == field[0][2] && field[2][2] == field[0][2]) {
+        if (field[0][2] != EMPTY && Objects.equals(field[1][1], field[0][2]) && Objects.equals(field[2][2], field[0][2])) {
             return field[0][2];
         }
         return EMPTY;
