@@ -39,11 +39,11 @@ public class GameLogic {
     // метод, анализирующий игровое поле, позволяющий определить победил ли, кто то из игроков
     public static void FieldAnalysis() {
         String winner = WhoDidWin();
-        if (winner.equals(CROSS)){
+        if (winner.equals(CROSS)) {
             statusGame = STATUS_WIN_X;
-        } else if (winner.equals(ZERO)){
+        } else if (winner.equals(ZERO)) {
             statusGame = STATUS_WIN_0;
-        } else if (FieldFilling()){
+        } else if (FieldFilling()) {
             statusGame = STATUS_DRAW;
         } else {
             statusGame = STATUS_CONTINUES;
@@ -52,9 +52,9 @@ public class GameLogic {
 
     // метод, проверяющий, заполнены ли все клетки игрового поля (да или нет)
     public static boolean FieldFilling() {
-        for (int line = 0; line < LINE; line ++){
-            for (int column = 0; column < COLUMN; column ++){
-                if (Objects.equals(field[line][column], EMPTY)){
+        for (int line = 0; line < LINE; line++) {
+            for (int column = 0; column < COLUMN; column++) {
+                if (Objects.equals(field[line][column], EMPTY)) {
                     return false;
                 }
             }
@@ -62,7 +62,7 @@ public class GameLogic {
         return true;
     }
 
-    // метод, проверяющий есть ли победитель, после каждого хода
+    // метод, проверяющий есть ли победитель, после каждого ходаи если победитель определен, возвращает его имя
     public static String WhoDidWin() {
 
         int iCoincidences;
@@ -101,20 +101,20 @@ public class GameLogic {
         return EMPTY;
     }
 
-        // метод, который выводит игровое поле в консоль после каждого хода
-        public static void OutputField () {
-            for (int line = 0; line < LINE; line++) {
-                for (int column = 0; column < COLUMN; column++) {
-                    System.out.print(field[line][column]);
-                    if (column != COLUMN - 1) {
-                        System.out.print("|");
-                    }
-                }
-                System.out.println();
-                if (line != LINE - 1) {
-                    System.out.println("-----------");
+    // метод, который выводит игровое поле в консоль после каждого хода
+    public static void OutputField() {
+        for (int line = 0; line < LINE; line++) {
+            for (int column = 0; column < COLUMN; column++) {
+                System.out.print(field[line][column]);
+                if (column != COLUMN - 1) {
+                    System.out.print("|");
                 }
             }
             System.out.println();
+            if (line != LINE - 1) {
+                System.out.println("-----------");
+            }
         }
+        System.out.println();
     }
+}

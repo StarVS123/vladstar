@@ -23,7 +23,7 @@ public class Field {
     public static int statusGame;
     public static final int STATUS_CONTINUES = 0, STATUS_DRAW = 1, STATUS_WIN_X = 2, STATUS_WIN_0 = 3;
 
-    // сканер, позволяющий получать введение игрока
+    // сканер, позволяющий игроку вводить данные
     public static Scanner in = new Scanner(System.in);
 
 
