@@ -1,5 +1,6 @@
 package com.volodimir.javacore.practice1;
 
+import java.security.cert.X509Certificate;
 import java.util.Scanner;
 
 public class GameLogic {
@@ -8,10 +9,23 @@ public class GameLogic {
 
     private final Scanner scanner = new Scanner(System.in);
 
-    private final String X = "X";
-    private final String O = "O";
+    private final String x = "X";
+
+    private final String o = "O";
 
     public void start() {
+        boolean isXTurn = true;
+        for (int i = 0; i < 9; i++) {
+            if (getWinner() != null) {
+                System.out.println("Победитель " + getWinner());
+                break;
+            }
+            if (isXTurn = true) {
+                makesFirstUserMove();
+                isXTurn = false;
+            } else makeSecondUserMove();
+            isXTurn = false;
+        }
     }
 
     private void makesFirstUserMove() {
@@ -48,31 +62,24 @@ public class GameLogic {
 
     private String getWinner() {
 
-       String[] values = field.getValues();
-       if (values[0].equals(values[1]) && values[1].equals(values[2])) {
-           return values[0];
-       }
-       else if (values[3].equals(values[4]) && values[4].equals(values[5])) {
-           return values[3];
-       }
-       else if (values[6].equals(values[7]) && values[7].equals(values[8])) {
-           return values[6];
-       }
-       else if (values[0].equals(values[3]) && values[3].equals(values[6])) {
-           return values[0];
-       }
-       else if (values[1].equals(values[4]) && values[4].equals(values[7])) {
-           return values[1];
-       }
-       else if (values[2].equals(values[5]) && values[5].equals(values[8])) {
-           return values[2];
-       }
-       else if (values[0].equals(values[4]) && values[4].equals(values[8])) {
-           return values[0];
-       }
-       else if (values[2].equals(values[4]) && values[4].equals(values[6])) {
-           return values[2];
-       }
+        String[] values = field.getValues();
+        if (values[0].equals(values[1]) && values[1].equals(values[2])) {
+            return values[0];
+        } else if (values[3].equals(values[4]) && values[4].equals(values[5])) {
+            return values[3];
+        } else if (values[6].equals(values[7]) && values[7].equals(values[8])) {
+            return values[6];
+        } else if (values[0].equals(values[3]) && values[3].equals(values[6])) {
+            return values[0];
+        } else if (values[1].equals(values[4]) && values[4].equals(values[7])) {
+            return values[1];
+        } else if (values[2].equals(values[5]) && values[5].equals(values[8])) {
+            return values[2];
+        } else if (values[0].equals(values[4]) && values[4].equals(values[8])) {
+            return values[0];
+        } else if (values[2].equals(values[4]) && values[4].equals(values[6])) {
+            return values[2];
+        }
         return null;
     }
 
