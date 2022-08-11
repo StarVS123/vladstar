@@ -17,12 +17,12 @@ public class GameLogic {
         boolean isXTurn = true;
         for (int i = 0; i < 9; i++) {
 
-            if (isXTurn = true) {
+            if (isXTurn == true) {
                 makesFirstUserMove();
                 isXTurn = false;
             } else {
                 makeSecondUserMove();
-                isXTurn = false;
+                isXTurn = true;
             }
             if (getWinner() != null) {
                 System.out.println("Победитель " + getWinner());
