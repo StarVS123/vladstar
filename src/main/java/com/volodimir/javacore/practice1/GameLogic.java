@@ -24,9 +24,11 @@ public class GameLogic {
                 makeSecondUserMove();
                 isXTurn = true;
             }
-        }
             if (getWinner() != null) {
                 System.out.println("Победитель " + getWinner());
+                break;
+            }
+
         }
     }
 
@@ -35,7 +37,7 @@ public class GameLogic {
         do {
             System.out.println("Игрок " + X + " введите номер ячейки.");
             int choice = scanner.nextInt();
-            if (choice >= 0 && choice <= 8) {
+            if (choice >= 1 && choice <= 9) {
                 field.setField(choice, X);
                 System.out.println("Вы поставили " + X + " в ячейку номер " + choice + ".");
                 field.showField();
@@ -52,7 +54,7 @@ public class GameLogic {
         do {
             System.out.println("Игрок " + O + " введите номер ячейки.");
             int choice = scanner.nextInt();
-            if (choice >= 0 && choice <= 8) {
+            if (choice >= 1 && choice <= 9) {
                 field.setField(choice, O);
                 System.out.println("Вы поставили " + O + " в ячейку номер " + choice + ".");
                 field.showField();
@@ -67,21 +69,23 @@ public class GameLogic {
     private String getWinner() {
 
         String[] values = field.getValues();
-        if (values[0].equals(values[1]) && values[1].equals(values[2])) {
+        if ((values[0] != null && values[1] != null && values[2] != null) && values[0].equals(values[1]) && values[1].equals(values[2])
+        {
             return values[0];
-        } else if (values[3].equals(values[4]) && values[4].equals(values[5])) {
+        } else
+        if ((values[3] != null && values[4] != null && values[5] != null) && values[3].equals(values[4]) && values[4].equals(values[5])) {
             return values[3];
-        } else if (values[6].equals(values[7]) && values[7].equals(values[8])) {
+        } else if ((values[6] != null && values[7] != null && values[8] != null) && values[6].equals(values[7]) && values[7].equals(values[8])) {
             return values[6];
-        } else if (values[0].equals(values[3]) && values[3].equals(values[6])) {
+        } else if ((values[0] != null && values[3] != null && values[6] != null) && values[0].equals(values[3]) && values[3].equals(values[6])) {
             return values[0];
-        } else if (values[1].equals(values[4]) && values[4].equals(values[7])) {
+        } else if ((values[1] != null && values[4] != null && values[7] != null) && values[1].equals(values[4]) && values[4].equals(values[7])) {
             return values[1];
-        } else if (values[2].equals(values[5]) && values[5].equals(values[8])) {
+        } else if ((values[2] != null && values[5] != null && values[8] != null) && values[2].equals(values[5]) && values[5].equals(values[8])) {
             return values[2];
-        } else if (values[0].equals(values[4]) && values[4].equals(values[8])) {
+        } else if ((values[0] != null && values[4] != null && values[8] != null) && values[0].equals(values[4]) && values[4].equals(values[8])) {
             return values[0];
-        } else if (values[2].equals(values[4]) && values[4].equals(values[6])) {
+        } else if ((values[2] != null && values[4] != null && values[6] != null) && values[2].equals(values[4]) && values[4].equals(values[6])) {
             return values[2];
         }
         return null;

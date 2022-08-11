@@ -8,6 +8,7 @@ public class Field {
 
     //метод сеттер, подставляет значение в выбранную ячейку (номер ячейки от 0 до 8, значение "Х" или "0")
     public void setField(int index, String value) {
+        index --;
         this.values[index] = value;
     }
 
@@ -18,11 +19,12 @@ public class Field {
     //метод, выводящий массив в консоль
     public void showField() {
         for (int i = 0; i < 9; i ++) {
+            System.out.print(values[i] + " ");
             int y = i + 1;
             if (y % 3 == 0) {
                 System.out.println();
             }
-            System.out.print(values[i]);
+
         }
     }
 }
