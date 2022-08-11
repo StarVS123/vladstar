@@ -22,7 +22,7 @@ public class GameLogic {
             int choice = scanner.nextInt();
             if (choice >= 0 && choice <= 8) {
                 field.setField(choice, value);
-                System.out.println("вы поставили " + value + " в ячейку номер " + choice + ".");
+                System.out.println("Вы поставили " + value + " в ячейку номер " + choice + ".");
                 field.showField();
                 correctInput = true;
             } else {
@@ -36,6 +36,15 @@ public class GameLogic {
         String value = "0";
         boolean correctInput = false;
         do {
+            int choice = scanner.nextInt();
+            if (choice >= 0 && choice <= 8) {
+                field.setField(choice, value);
+                System.out.println("Вы поставили " + value + " в ячейку номер " + choice + ".");
+                field.showField();
+                correctInput = true;
+            } else {
+                System.out.println("Неправильный выбор. Повторите ввод.");
+            }
         }
         while (correctInput != true);
     }
