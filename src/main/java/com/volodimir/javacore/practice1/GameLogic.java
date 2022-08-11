@@ -12,17 +12,19 @@ public class GameLogic {
 
     private final Scanner scanner = new Scanner(System.in);
 
+    private final String X = "X";
+    private final String O = "O";
+
     public void start() {
     }
 
     private void makesFirstUserMove() {
-        String value = "X";
         boolean correctInput = false;
         do {
             int choice = scanner.nextInt();
             if (choice >= 0 && choice <= 8) {
-                field.setField(choice, value);
-                System.out.println("Вы поставили " + value + " в ячейку номер " + choice + ".");
+                field.setField(choice, X);
+                System.out.println("Вы поставили " + X + " в ячейку номер " + choice + ".");
                 field.showField();
                 correctInput = true;
             } else {
@@ -33,13 +35,12 @@ public class GameLogic {
     }
 
     private void makeSecondUserMove() {
-        String value = "0";
         boolean correctInput = false;
         do {
             int choice = scanner.nextInt();
             if (choice >= 0 && choice <= 8) {
-                field.setField(choice, value);
-                System.out.println("Вы поставили " + value + " в ячейку номер " + choice + ".");
+                field.setField(choice, O);
+                System.out.println("Вы поставили " + O + " в ячейку номер " + choice + ".");
                 field.showField();
                 correctInput = true;
             } else {
@@ -50,6 +51,9 @@ public class GameLogic {
     }
 
     private String getWinner() {
+
+
+        if ()
         return null;
     }
 }
