@@ -48,15 +48,48 @@ public class GameLogic {
 
     private String getWinner() {
 
-        String winner = null;
-
-        if ()
-            return null;
+       String[] values = field.getValues();
+       if (values[0].equals(values[1]) && values[1].equals(values[2])) {
+           return values[0];
+       }
+       else if (values[3].equals(values[4]) && values[4].equals(values[5])) {
+           return values[3];)
+       }
+       else if (values[6].equals(values[7]) && values[7].equals(values[8])) {
+           return values[6];)
+       }
+       else if (values[0].equals(values[3]) && values[3].equals(values[6])) {
+           return values[0];)
+       }
+       else if (values[1].equals(values[4]) && values[4].equals(values[7])) {
+           return values[1];)
+       }
+       else if (values[2].equals(values[5]) && values[5].equals(values[8])) {
+           return values[2];)
+       }
+       else if (values[0].equals(values[4]) && values[4].equals(values[8])) {
+           return values[0];)
+       }
+       else if (values[2].equals(values[4]) && values[4].equals(values[6])) {
+           return values[2];)
+       }
+        return null;
     }
 
     private boolean isFieldFull() {
-        for (int index = 0; index < 9; index++);
 
+        boolean result = true;
+
+        for (int index = 0; index < 9; index++) {
+            String[] values = field.getValues();
+            if (values[index] == null) {
+                result = false;
+                break;
+            }
+        }
+        return result;
     }
+
 }
+
 
