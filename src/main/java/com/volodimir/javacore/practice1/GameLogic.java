@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class GameLogic {
 
-    // дает доступ к объектам класса Field
+    // дает доступ к методам класса Field
     private final Field field = new Field();
 
-    // импортирует сканео, позволяющий использовать результат ввода игрока
+    // импортирует сканер, позволяющий использовать результат ввода игрока
     private final Scanner scanner = new Scanner(System.in);
 
     // переменные
