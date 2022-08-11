@@ -24,9 +24,9 @@ public class GameLogic {
                 makeSecondUserMove();
                 isXTurn = true;
             }
+        }
             if (getWinner() != null) {
                 System.out.println("Победитель " + getWinner());
-            }
         }
     }
 
