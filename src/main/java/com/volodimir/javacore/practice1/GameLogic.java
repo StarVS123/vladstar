@@ -1,10 +1,6 @@
 package com.volodimir.javacore.practice1;
 
-import java.util.Objects;
 import java.util.Scanner;
-
-import static com.volodimir.javacore.practice.Field.*;
-import static com.volodimir.javacore.practice.Field.activePlayer;
 
 public class GameLogic {
 
@@ -52,9 +48,15 @@ public class GameLogic {
 
     private String getWinner() {
 
+        String winner = null;
 
         if ()
-        return null;
+            return null;
+    }
+
+    private boolean isFieldFull() {
+        for (int index = 0; index < 9; index++);
+
     }
 }
 

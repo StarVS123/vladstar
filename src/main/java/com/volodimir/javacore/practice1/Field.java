@@ -9,7 +9,9 @@ public class Field {
         this.values[index] = value;
     }
 
-}
+    public String[] getValues() {
+        return values;
+    }
 
     //метод, выводящий массив в консоль
     public void showField() {
