@@ -20,11 +20,13 @@ public class GameLogic {
             if (isXTurn = true) {
                 makesFirstUserMove();
                 isXTurn = false;
-            } else makeSecondUserMove();
-            isXTurn = false;
-        }
-        if (getWinner() != null) {
-            System.out.println("Победитель " + getWinner());
+            } else {
+                makeSecondUserMove();
+                isXTurn = false;
+            }
+            if (getWinner() != null) {
+                System.out.println("Победитель " + getWinner());
+            }
         }
     }
 
