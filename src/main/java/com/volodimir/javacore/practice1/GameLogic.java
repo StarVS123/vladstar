@@ -9,9 +9,9 @@ public class GameLogic {
 
     private final Scanner scanner = new Scanner(System.in);
 
-    private final String x = "X";
+    private final String X = "X";
 
-    private final String o = "O";
+    private final String O = "O";
 
     public void start() {
         boolean isXTurn = true;
