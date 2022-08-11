@@ -16,21 +16,22 @@ public class GameLogic {
     public void start() {
         boolean isXTurn = true;
         for (int i = 0; i < 9; i++) {
-            if (getWinner() != null) {
-                System.out.println("Победитель " + getWinner());
-                break;
-            }
+
             if (isXTurn = true) {
                 makesFirstUserMove();
                 isXTurn = false;
             } else makeSecondUserMove();
             isXTurn = false;
         }
+        if (getWinner() != null) {
+            System.out.println("Победитель " + getWinner());
+        }
     }
 
     private void makesFirstUserMove() {
         boolean correctInput = false;
         do {
+            System.out.println("Игрок " + X + " введите номер ячейки.");
             int choice = scanner.nextInt();
             if (choice >= 0 && choice <= 8) {
                 field.setField(choice, X);
@@ -47,6 +48,7 @@ public class GameLogic {
     private void makeSecondUserMove() {
         boolean correctInput = false;
         do {
+            System.out.println("Игрок " + O + " введите номер ячейки.");
             int choice = scanner.nextInt();
             if (choice >= 0 && choice <= 8) {
                 field.setField(choice, O);
