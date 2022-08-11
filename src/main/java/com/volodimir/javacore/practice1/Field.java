@@ -1,5 +1,7 @@
 package com.volodimir.javacore.practice1;
 
+import java.util.Arrays;
+
 public class Field {
     // объявляем массив из 9 ячеек
     private final String[] values = new String[9];
@@ -15,6 +17,12 @@ public class Field {
 
     //метод, выводящий массив в консоль
     public void showField() {
-        System.out.println(this.values);
+        for (int i = 0; i < 9; i ++) {
+            int y = i + 1;
+            if (y % 3 == 0) {
+                System.out.println();
+            }
+            System.out.print(values[i]);
+        }
     }
 }
