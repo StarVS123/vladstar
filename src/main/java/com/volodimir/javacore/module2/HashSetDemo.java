@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class HashSetDemo {
     public static void main(String[] args) {
-        HashSet hashSet = new HashSet<>();
+        HashSet<String> hashSet = new HashSet<>();
 
         System.out.println("Adding element into hashSet...");
 

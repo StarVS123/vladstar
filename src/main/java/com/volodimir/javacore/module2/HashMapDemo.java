@@ -8,7 +8,7 @@ public class HashMapDemo {
 
     public static void main(String[] args) {
 
-        HashMap < string, string = "" > hashMap = new HashMap<>();
+        HashMap < String, String > hashMap = new HashMap<>();
 
         System.out.println("Adding elements into hashMap...");
 
@@ -29,15 +29,15 @@ public class HashMapDemo {
 
             System.out.println(mapEntry.getKey() + ":" + mapEntry.getValue());
         }
-        System.out.println("n\===================\n");
+        System.out.println("\n===================\n");
 
-        System.out.println("Modifying Proselyte's specialty:");
+        System.out.println("Modifying Proselyte's specialty...");
 
         String specialty = hashMap.get("Proselyte");
         specialty += " Developer (Changed)";
         hashMap.put("Proselyte", specialty);
 
-        System.out.println("n\===================\n");
+        System.out.println("\n===================\n");
         System.out.println("Final hashMap content using Set:");
         set = hashMap.entrySet();
 
@@ -46,7 +46,7 @@ public class HashMapDemo {
 
             System.out.println(mapEntry.getKey() + ":" + mapEntry.getValue());
         }
-        System.out.println("n\===================\n");
+        System.out.println("\n===================\n");
     }
 }
-</string,>
+

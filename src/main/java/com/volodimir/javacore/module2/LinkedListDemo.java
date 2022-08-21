@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class LinkedListDemo {
     public static void main(String[] args) {
 
-        LinkedList linkedList = new LinkedList<>();
+        LinkedList<String> linkedList = new LinkedList<>();
 
         System.out.println("Adding elements to linkedList...");
 
@@ -25,7 +25,7 @@ public class LinkedListDemo {
 
         linkedList.removeFirst();
         linkedList.removeLast();
-        linkedList.remove("One and half");
+        linkedList.remove("One and Half");
 
         System.out.println("Changing element withe value second");
         linkedList.set(0, "Changed " + linkedList.get(0));

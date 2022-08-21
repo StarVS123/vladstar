@@ -7,8 +7,8 @@ import java.util.TreeSet;
 public class TreeSetPerformanceTest{
     public static void main(String[] args) {
 
-        List arrayList = new ArrayList<>();
-        TreeSet treeSet = new TreeSet<>();
+        List<Integer> arrayList = new ArrayList<>();
+        TreeSet<Integer> treeSet = new TreeSet<>();
 
         System.out.println("Filling our structures...");
 

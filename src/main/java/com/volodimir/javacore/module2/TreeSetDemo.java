@@ -5,7 +5,7 @@ import java.util.TreeSet;
 public class TreeSetDemo {
     public static void main(String[] args) {
 
-        TreeSet treeSet = new TreeSet<>();
+        TreeSet<String> treeSet = new TreeSet<>();
 
         System.out.println("Adding element into treeSet...");
 
