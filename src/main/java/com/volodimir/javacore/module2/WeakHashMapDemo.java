@@ -1,7 +1,6 @@
 package com.volodimir.javacore.module2;
 
 import  java.util.Map;
-import java.util.IllegalFormatWidthException;
 import java.util.WeakHashMap;
 
 public class WeakHashMapDemo {
@@ -26,7 +25,7 @@ public class WeakHashMapDemo {
                 }
             }
         };
-        Thread thread = new Thread();
+        Thread thread = new Thread(runnable);
         thread.start();
         System.out.println("Application is waiting");
         try {

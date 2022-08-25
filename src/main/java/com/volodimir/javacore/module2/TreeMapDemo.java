@@ -6,6 +6,7 @@ import  java.util.TreeMap;
 
 public class TreeMapDemo {
     public static void main(String[] args) {
+
         TreeMap< Integer, String> treeMap = new TreeMap<>();
 
         treeMap.put(2, "Proselyte");
@@ -30,6 +31,10 @@ public class TreeMapDemo {
         treeMap.put(2, name);
 
         System.out.println("Final TreeMap content:");
+
+        System.out.println(set1);
+
+        System.out.println("\n====================\n");
 
         set1 = treeMap.entrySet();
         for (Object element : set1){
