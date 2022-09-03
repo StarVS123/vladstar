@@ -8,12 +8,12 @@ public class RepeatSearchMethod1 {
         List<Integer> arrayList1 = new ArrayList<>();
 
         arrayList1.add(7);
-        arrayList1.add(9);
+        arrayList1.add(5);
         arrayList1.add(2);
         arrayList1.add(8);
         arrayList1.add(11);
-        arrayList1.add(9);
-        arrayList1.add(5);
+        arrayList1.add(18);
+        arrayList1.add(12);
 
         arrayList1.size();
         System.out.println("Размер листа: " + arrayList1.size());
@@ -24,7 +24,9 @@ public class RepeatSearchMethod1 {
         System.out.println("Размер сета: " + set.size());
 
         if (arrayList1.size() > set.size()) {
-            return;
+            System.out.println("Дубликат найден.");
+        } else {
+            System.out.println("Дубликатов нет.");
         }
     }
 }

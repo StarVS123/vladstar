@@ -18,17 +18,17 @@ public class RepeatSearchMethod {
         arrayList.add(9);
 
         int i, j;
+        boolean result = false;
 
         for (i = 0; i < arrayList.size(); i++) {
             for (j = i + 1; j < arrayList.size(); j++) {
                 if (arrayList.get(j).equals(arrayList.get(i))) {
-                    System.out.println("true");
-                    if (!arrayList.get(i).equals(arrayList.get(j))) {
-                        System.out.println("false");
-                    }
+                    result = true;
+                    break;
                 }
             }
         }
+        System.out.println(result);
     }
 }
 
