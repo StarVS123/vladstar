@@ -15,12 +15,10 @@ public class RepeatSearchMethod1 {
         arrayList1.add(18);
         arrayList1.add(12);
 
-        arrayList1.size();
         System.out.println("Размер листа: " + arrayList1.size());
 
         Set<Integer> set = new HashSet<>(arrayList1);
 
-        set.size();
         System.out.println("Размер сета: " + set.size());
 
         if (arrayList1.size() > set.size()) {
