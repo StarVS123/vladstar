@@ -3,7 +3,7 @@ package com.volodimir.javacore.module2.practice;
 import java.util.*;
 
 public class RepeatSearchMethod1 {
-    private static <T> boolean repeatSearchMethod1(T... array) {
+    private static <T> boolean repeatSearchMethod(T... array) {
         Arrays.sort(array);
         T prev = null;
         for (T element : array) {
@@ -27,7 +27,7 @@ public class RepeatSearchMethod1 {
         arrayList1.add(9);
         arrayList1.add(5);
 
-        if (repeatSearchMethod1(arrayList1)) {
+        if (repeatSearchMethod(arrayList1)) {
             System.out.println("Дубликат найден.");
         }
     }
