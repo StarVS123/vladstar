@@ -15,7 +15,7 @@ public class RepeatSearchMethod {
         arrayList.add(8);
         arrayList.add(11);
         arrayList.add(5);
-        arrayList.add(3);
+        arrayList.add(9);
 
         int i, j;
 
