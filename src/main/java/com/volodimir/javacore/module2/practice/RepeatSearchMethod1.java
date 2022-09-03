@@ -1,20 +1,10 @@
 package com.volodimir.javacore.module2.practice;
 
+import com.volodimir.javacore.module1.chapter08.A;
+
 import java.util.*;
 
 public class RepeatSearchMethod1 {
-    private static <T> boolean repeatSearchMethod(T... array) {
-        Arrays.sort(array);
-        T prev = null;
-        for (T element : array) {
-            if (element != null && element.equals(prev)) {
-                return true;
-            }
-            prev = element;
-        }
-        return false;
-    }
-
     public static void main(String[] args) {
 
         List<Integer> arrayList1 = new ArrayList<>();
@@ -27,8 +17,13 @@ public class RepeatSearchMethod1 {
         arrayList1.add(9);
         arrayList1.add(5);
 
-        if (repeatSearchMethod(arrayList1)) {
-            System.out.println("Дубликат найден.");
+        Collections.sort(arrayList1);
+
+        for (int i = 0; i < arrayList1.length - 1; i++) {
+            if (i == (i + 1)) {
+                return;
+            }
         }
     }
 }
+
