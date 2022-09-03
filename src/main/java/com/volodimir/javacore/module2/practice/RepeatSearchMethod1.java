@@ -1,7 +1,5 @@
 package com.volodimir.javacore.module2.practice;
 
-import com.volodimir.javacore.module1.chapter08.A;
-
 import java.util.*;
 
 public class RepeatSearchMethod1 {
@@ -17,13 +15,21 @@ public class RepeatSearchMethod1 {
         arrayList1.add(9);
         arrayList1.add(5);
 
-        Collections.sort(arrayList1);
+        arrayList1.size();
+        System.out.println("Размер листа: " + arrayList1.size());
 
-        for (int i = 0; i < arrayList1.length - 1; i++) {
-            if (i == (i + 1)) {
-                return;
-            }
+        Set<Integer> set = new HashSet<>(arrayList1);
+
+        set.size();
+        System.out.println("Размер сета: " + set.size());
+
+        if (arrayList1.size() > set.size()) {
+            return;
         }
     }
 }
+
+
+
+
 
