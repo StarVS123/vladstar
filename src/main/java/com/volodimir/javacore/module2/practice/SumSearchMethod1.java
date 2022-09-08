@@ -22,11 +22,11 @@ public class SumSearchMethod1 {
         for (int i = 0; i < arrayList.size(); i++) {
             int element = arrayList.get(i);
             int difference = sum - element;
-            if (!hashMap.containsKey(element)) {
-                hashMap.put(difference, element);
+            if (!hashMap.containsKey(difference)) {
+                hashMap.put(element, i);
             }
             else {
-                System.out.println(difference + " " + element);
+                System.out.println("Интексы элементов: " + i + " и " + hashMap.get(difference));
                 break;
             }
         }
