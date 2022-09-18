@@ -1,4 +1,4 @@
-package com.volodimir.javacore.module3;
+package com.volodimir.javacore.module3.chapter10;
 
 import java.util.Random;
 
